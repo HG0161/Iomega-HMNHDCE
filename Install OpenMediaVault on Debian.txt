@@ -15,6 +15,18 @@ Insert:
 	deb http://archive.debian.org/debian-archive/debian-backports squeeze-backports main
 	deb http://archive.debian.org/debian-archive/debian-backports squeeze-backports-sloppy main
 	
+Update your package list
+	apt-get update
+	apt-get upgrade
+	
+If you get errors about the keys being out of date or invalid set your date to 2012-01-01
+
+Command:
+	date --set 2008-01-01
+	
+then re-run apt-get update and upgrade
+
+	
 Command:
 
 	echo "deb http://teration.net/repo squeeze main" >> /etc/apt/sources.list
