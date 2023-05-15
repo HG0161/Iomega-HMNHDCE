@@ -1,5 +1,20 @@
 Howto: Install OpenMediaVault on Debian:
 
+As Squeeze is now out of service you need to update the sources.list to the follow addresses 
+
+Command:
+	nano /etc/source.list 
+	
+Now delete the old addresses or simply put a # before them to comment them out and add these
+
+Insert:
+	deb http://archive.debian.org/debian-archive/debian/ squeeze main contrib non-free
+	deb-src http://archive.debian.org/debian-archive/debian squeeze main contrib non-free
+	deb http://archive.debian.org/debian-security/ squeeze/updates main contrib
+	deb-src http://archive.debian.org/debian-security/ squeeze/updates main contrib
+	deb http://archive.debian.org/debian-archive/debian-backports squeeze-backports main
+	deb http://archive.debian.org/debian-archive/debian-backports squeeze-backports-sloppy main
+	
 Command:
 
 	echo "deb http://teration.net/repo squeeze main" >> /etc/apt/sources.list
@@ -11,3 +26,4 @@ Command:
 	apt-key add archive.key
 	apt-get update
 	apt-get install openmediavault
+
